@@ -5,6 +5,10 @@ Easy Questionnaire
 
 Python3.x+MySQL
 
+# 使用方式
+
+项目尚未开发完整，暂时不能使用。
+
 
 # 结构规划
 
