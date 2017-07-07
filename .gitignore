@@ -58,3 +58,9 @@ docs/_build/
 # PyBuilder
 target/
 
+
+
+/static/ft/*
+*.DS_Store
+/config.py
+/.vscode/*

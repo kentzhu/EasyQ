@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+		<aside id="fh5co-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url(&quot;static/images/img_bg_2.jpg&quot;); width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" data-thumb-alt="" class="">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
+				   				<div class="slider-text-inner">
+				   					<h1>简单快速的在线问卷</h1>
+									{% if not current_user %}
+									<p><a class="btn btn-primary btn-demo" href="/register"> 立即注册</a> <a class="btn btn-primary btn-learn" href="/login">管理登录</a></p>
+									{% end %}
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(&quot;static/images/img_bg_3.jpg&quot;); width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" data-thumb-alt="" class="">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container-fluids">
+			   			<div class="row">
+				   			<div class="col-md-6 col-md-offset-3 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Easy Q</h1>
+									{% if not current_user %}
+									<p><a class="btn btn-primary btn-demo" href="/register"> 立即注册</a> <a class="btn btn-primary btn-learn" href="/login">管理登录</a></p>
+									{% end %}
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>	
+			  	</ul>
+
+			</div>
+		</aside>
+
+
+		<div id="fh5co-blog">
+			<div class="row animate-box fadeInUp animated-fast">
+				<div class="col-md-6 col-md-offset-3 text-center heading-section">
+					<h3>最新问卷</h3>
+				</div>
+			</div>
+			<div class="row">
+
+				{% for i in data['projects'] %}
+				<div class="col-md-4">
+					<div class="fh5co-blog animate-box fadeInUp animated-fast">
+						<div class="blog-text">
+							<h3><a href="#">{{ i['title'] }}</a></h3>
+							<p>{{ i['remark'] }}</p>
+							<ul class="stuff">
+								<li><i class="icon-heart3"></i>249</li>
+								<li><i class="icon-eye2"></i>1,308</li>
+								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+							</ul>
+						</div> 
+					</div>
+				</div>
+				{% end %}
+
+
+			</div>
+		</div>
+
+
+{% end %}

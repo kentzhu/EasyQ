@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+        <div id="fh5co-contact">
+			<div class="row animate-box fadeInUp animated-fast">
+				<div class="col-md-6 col-md-offset-3 text-center heading-section">
+					<h3>我的问卷</h3>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-md-12">
+                    <table class="xtable" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th width="50">ID</th>
+                                <th>问卷标题</th>
+                                <th width="100">浏览数</th>
+                                <th width="100">回收数</th>
+
+                                <th width="100">修改问卷</th>
+                                <th width="100">查看答卷</th>
+                                <th width="100">下载答卷</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in data['projects'] %}
+                            <tr>
+                                <td>{{ i['id'] }}</td>
+                                <td>{{ i['title'] }}</tdh>
+                                <td>308</td>
+                                <td>249</td>
+
+                                <td>修改问卷</td>
+                                <td>查看答卷</td>
+                                <td>下载答卷</td>
+                            </tr>
+                            {% end %}
+                        </tbody>
+                    </table>
+                </div>
+			</div>
+		</div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align:center; padding-bottom:50px">
+                <p><a href="/createproject">创建新问卷</a></p>
+            </div>
+		</div>
+
+
+{% end %}

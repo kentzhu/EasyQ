@@ -1,0 +1,38 @@
+
+
+{% if i.id==1 %}
+{% comment 普通文本 %}
+<div class="row dragable">
+	<div class="col-md-10 col-md-push-1 animate-box">
+		<div class="row">
+			<div class="col-md-2">
+				<label class="eq_f_">{{ i.name }}</label>
+			</div>
+			<div class="col-md-{{ i.colsize }}">
+				<input type="text" class="form-control" placeholder="">
+				{{ '<p>'+i.defaultremark+'</p>' if i.defaultremark else "" }}
+			</div>
+		</div>
+	</div>
+</div>
+{% end %}
+
+
+{% if i.id==2 %}
+{% comment 普通整数/ %}
+<div class="row dragable">
+	<div class="col-md-10 col-md-push-1 animate-box">
+		<div class="row">
+			<div class="col-md-2">
+				<label class="eq_f_name">{{ i.name }}</label>
+			</div>
+			<div class="col-md-{{ i.colsize }}">
+				<input type="text" class="form-control" placeholder="">
+				{% if i.defaultremark %}
+					<p>{{ i.defaultremark }}</p>
+				{% end %}
+			</div>
+		</div>
+	</div>
+</div>
+{% end %}
